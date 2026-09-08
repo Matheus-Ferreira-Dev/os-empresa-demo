@@ -1,0 +1,11 @@
+.worktrees/
+
+# Local secrets and generated state
+.env
+.env.*
+!.env.example
+*.log
+dist/
+node_modules/
+__pycache__/
+
