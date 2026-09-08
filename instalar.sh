@@ -2,7 +2,7 @@
 set -euo pipefail
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TARGET="${1:-os-empresa}"
-mkdir -p "$TARGET/.claude/skills" "$TARGET/templates" "$TARGET/sistema" "$TARGET/clientes" "$TARGET/historico" "$TARGET/skills/propostas" "$TARGET/scripts"
+mkdir -p "$TARGET/.claude/skills" "$TARGET/templates" "$TARGET/sistema" "$TARGET/clientes" "$TARGET/historico" "$TARGET/skills/propostas" "$TARGET/skills/criadas-pelo-usuario" "$TARGET/scripts" "$TARGET/projetos-internos" "$TARGET/meu-negocio"
 for file in README.md COMECE-AQUI.md TESTE-PARA-AMIGO.md AGENTS.md CLAUDE.md LICENSE.txt NOTICE-THIRD-PARTY.md; do
   [ -e "$TARGET/$file" ] || cp "$SOURCE_DIR/$file" "$TARGET/$file"
 done

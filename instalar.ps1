@@ -5,7 +5,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $Source = Split-Path -Parent $MyInvocation.MyCommand.Path
 $directories = @(
-    '.claude\skills', 'templates', 'sistema', 'clientes', 'historico', 'skills', 'skills\propostas', 'scripts'
+    '.claude\skills', 'templates', 'sistema', 'clientes', 'historico', 'skills', 'skills\propostas', 'skills\criadas-pelo-usuario', 'scripts', 'projetos-internos', 'meu-negocio'
 )
 
 New-Item -ItemType Directory -Force -Path $Target | Out-Null
