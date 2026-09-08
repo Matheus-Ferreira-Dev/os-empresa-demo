@@ -31,10 +31,15 @@ Depois, abra `COMECE-AQUI.md` e peça ao seu agente de código para seguir as in
 - criar uma landing page local com briefing, copy e `index.html`;
 - pedir uma nova skill e revisar a proposta antes de instalá-la;
 - consultar `painel.md` para saber o estado de cada projeto.
+- gerar `sistema/contexto-minimo.md` para trabalhar com menos tokens.
 
 ## Segurança da prévia
 
 Os arquivos são locais, não exigem chaves de API e não publicam nada na internet. Conteúdo opcional de HyperFrames, Video Use, Remotion, RTK, Ponytail e Caveman está documentado em `sistema/catalogo.md`, mas não vem instalado.
+
+## Menos tokens
+
+Depois de criar ou alterar projetos, rode `powershell -File scripts/gerar-indice.ps1` e `powershell -File scripts/compactar-contexto.ps1`. O agente deve ler o resumo, um manifesto e uma skill por vez, sem carregar entregas completas.
 
 ## Licença
 

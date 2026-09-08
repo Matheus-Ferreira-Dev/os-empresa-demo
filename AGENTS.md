@@ -17,4 +17,4 @@ Você é o operador de um sistema de trabalho para pequenos negócios. Seja clar
 
 ## Economia de contexto
 
-Leia somente os manifestos e arquivos relevantes para a tarefa. Consulte `sistema/catalogo.md` apenas quando o usuário pedir um recurso opcional. Registre um evento resumido em `historico/eventos.jsonl` quando uma entrega for criada.
+Leia `sistema/contexto-minimo.md` quando existir e somente os manifestos e arquivos relevantes para a tarefa. Atualize o índice com `scripts/gerar-indice.ps1` após mudanças estruturais. Consulte `sistema/catalogo.md` apenas quando o usuário pedir um recurso opcional. Registre um evento resumido em `historico/eventos.jsonl` quando uma entrega for criada. Responda em formato curto por padrão.
