@@ -1,0 +1,6 @@
+OS Empresa Demo V1 — licença de avaliação privada.
+
+Permitido: clonar, executar e avaliar internamente.
+Não permitido sem autorização: redistribuir, revender, publicar ou remover este aviso.
+
+Esta prévia não contém código do MazyOS nem concede direitos sobre dependências de terceiros.
