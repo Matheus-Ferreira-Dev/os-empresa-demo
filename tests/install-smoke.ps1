@@ -19,9 +19,9 @@ try {
 
     $marker = Join-Path $sandbox 'clientes\nao-apagar.md'
     New-Item -ItemType Directory -Force -Path (Split-Path -Parent $marker) | Out-Null
-    Set-Content -LiteralPath $marker -Value 'dados do amigo'
+    Set-Content -LiteralPath $marker -Value 'dados existentes'
     & $installer -Target $sandbox | Out-Null
-    if ((Get-Content -LiteralPath $marker -Raw) -ne "dados do amigo`r`n") {
+    if ((Get-Content -LiteralPath $marker -Raw) -ne "dados existentes`r`n") {
         throw 'Installer overwrote existing client data'
     }
 

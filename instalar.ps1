@@ -13,7 +13,7 @@ foreach ($relative in $directories) {
     New-Item -ItemType Directory -Force -Path (Join-Path $Target $relative) | Out-Null
 }
 
-$files = @('README.md', 'COMECE-AQUI.md', 'TESTE-PARA-AMIGO.md', 'AGENTS.md', 'CLAUDE.md', 'LICENSE.txt', 'NOTICE-THIRD-PARTY.md')
+$files = @('README.md', 'COMECE-AQUI.md', 'AGENTS.md', 'CLAUDE.md', 'LICENSE.txt', 'NOTICE-THIRD-PARTY.md')
 foreach ($file in $files) {
     $destination = Join-Path $Target $file
     if (-not (Test-Path -LiteralPath $destination)) {
