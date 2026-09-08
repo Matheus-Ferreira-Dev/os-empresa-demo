@@ -30,6 +30,7 @@ Depois, abra `COMECE-AQUI.md` e peça ao seu agente de código para seguir as in
 - criar um carrossel com roteiro, legenda e CTA;
 - criar uma landing page local com briefing, copy e `index.html`;
 - pedir uma nova skill e revisar a proposta antes de instalá-la;
+- consultar `COMO-ADICIONAR-SKILL.md` para criar ou instalar uma capacidade;
 - consultar `painel.md` para saber o estado de cada projeto.
 - gerar `sistema/contexto-minimo.md` para trabalhar com menos tokens.
 
