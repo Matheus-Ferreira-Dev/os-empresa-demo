@@ -1,0 +1,9 @@
+param([string]$Root = (Get-Location).Path, [Parameter(Mandatory)][string]$Client, [Parameter(Mandatory)][string]$Project, [Parameter(Mandatory)][string]$Offer)
+$ErrorActionPreference = 'Stop'
+$base = Join-Path $Root "clientes\$Client\projetos\$Project\entregas\paginas"; New-Item -ItemType Directory -Force -Path $base | Out-Null
+$n = 1; while (Test-Path (Join-Path $base "oferta-v$n")) { $n++ }; $out = Join-Path $base "oferta-v$n"; New-Item -ItemType Directory -Path $out | Out-Null
+@("# Briefing", '', "- **Oferta:** $Offer", '- **Público:** pendente', '- **CTA:** falar com a empresa') | Set-Content (Join-Path $out 'briefing.md')
+@("# Copy - $Offer", '', '## Proposta de valor', "$Offer para avancar com clareza.", '', '## Beneficios', '- Beneficio principal', '- Processo simples', '- Proximo passo guiado', '', '## CTA', 'Quero saber mais') | Set-Content (Join-Path $out 'copy.md')
+@('# Checklist', '', '- [ ] oferta compreensível', '- [ ] CTA visível', '- [ ] HTML responsivo') | Set-Content (Join-Path $out 'checklist.md')
+@("<!doctype html>", '<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + $Offer + '</title><style>body{font-family:Arial;max-width:760px;margin:0 auto;padding:48px 20px;line-height:1.5}a{display:inline-block;background:#111;color:#fff;padding:14px 20px;border-radius:8px;text-decoration:none}</style></head><body><main><p>OS Empresa - previa</p><h1>' + $Offer + '</h1><p>Uma proposta clara para o proximo passo do seu negocio.</p><h2>Por que funciona</h2><ul><li>Beneficio principal</li><li>Processo simples</li><li>Acompanhamento</li></ul><a href="#contato">Quero saber mais</a><h2 id="contato">Duvidas</h2><p>Substitua este bloco por contato e prova do cliente.</p></main></body></html>') | Set-Content (Join-Path $out 'index.html')
+Write-Host "Landing page criada: $out"
